@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular 5';
-  myNum: number = 9999999.658; // 1234.1111
+  myNum: number = 9999999.699; // 1234.1111
 
   getType(){
     return typeof(this.myNum);
