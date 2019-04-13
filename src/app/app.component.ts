@@ -6,5 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular';
+  name = 'Angular 5';
+  myNum: number = 9999999.658; // 1234.1111
+
+  getType(){
+    return typeof(this.myNum);
+  }
+
+  reformate(str:string){
+    /*
+      let splitedRight = str.split('.')[1];
+      let right='';
+      if(splitedRight){
+        right = splitedRight.slice(0,2);
+      }
+    */
+    let splitedLeft = str.split(' ');
+    let left='';
+    for(let sl of splitedLeft){
+      left += sl;
+    }
+
+    this.myNum = parseFloat(left);
+  }
+
 }

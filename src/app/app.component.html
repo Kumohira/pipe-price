@@ -1,4 +1,10 @@
 <hello name="{{ name }}"></hello>
 <p>
   Start editing to see some magic happen :)
+ 
+ <input type="text" [ngModel]="myNum | number:'.0-2' | mypipe" (ngModelChange)="reformate($event)">
+  <!-- <input type="number" [(ngModel)]="myNum"> -->
+ <br />
+ {{myNum}} <br />
+  {{getType()}}
 </p>
